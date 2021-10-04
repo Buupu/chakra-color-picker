@@ -1,4 +1,4 @@
-# chakra-otp-input
+# chakra-color-picker
 
 Color Picker Component Package for Chakra UI
 
