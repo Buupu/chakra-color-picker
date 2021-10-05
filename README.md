@@ -4,9 +4,13 @@ Color Picker Component Package for Chakra UI
 
 ## Codesandbox Link Coming Soon
 
-## NPM Link Coming Soon
+## NPM Link [Here](https://www.npmjs.com/package/chakra-color-picker)
 
-## Install Coming Soon
+## Install
+
+```bash
+npm i chakra-color-picker
+```
 
 ## Usage
 
