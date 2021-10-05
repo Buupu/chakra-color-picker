@@ -7,7 +7,7 @@ export const App = () => {
     <ChakraProvider theme={theme}>
       <Flex w="full" h="100vh">
         <Flex flex={1} justify="center" align="center" background="blue.900">
-          <ColorPicker />
+          <ColorPicker onChange={(color) => console.log(color)} />
         </Flex>
       </Flex>
     </ChakraProvider>
