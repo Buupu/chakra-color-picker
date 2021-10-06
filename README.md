@@ -53,6 +53,26 @@ export default function App() {
     <td>-</td>
     <td>Returns color value as a string to the function provided.</td>
   </tr>
+  <tr>
+    <td>colors</td>
+    <td>string[]</td>
+    <td>false</td>
+    <td>
+        [
+            "gray.500",
+            "red.500",
+            "orange.500",
+            "yellow.500",
+            "green.500",
+            "teal.500",
+            "blue.500",
+            "cyan.500",
+            "purple.500",
+            "pink.500",
+        ]
+    </td>
+    <td>Accepts an array of color values that will override the default values.</td>
+  </tr>
 </table>
 
 ## Running project
