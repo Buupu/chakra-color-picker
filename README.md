@@ -73,6 +73,15 @@ export default function App() {
     </td>
     <td>Accepts an array of color values that will override the default values.</td>
   </tr>
+  <tr>
+    <td>bg</td>
+    <td>string</td>
+    <td>false</td>
+    <td>
+        "white"
+    </td>
+    <td>Changes the background color of the PopoverContent.</td>
+  </tr>
 </table>
 
 ## Running project
