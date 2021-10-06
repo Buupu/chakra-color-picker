@@ -21,7 +21,7 @@ const defaultColors = [
   "pink.500",
 ];
 
-export const ColorPicker = ({ onChange, colors }: ColorPickerProps) => {
+export const ColorPicker = ({ onChange, colors, bg }: ColorPickerProps) => {
   const [isOpen, setIsOpen] = useBoolean();
   const [selectedColor, setSelectedColor] = useState<string>("");
   const colorPalette = colors || defaultColors;
@@ -36,7 +36,7 @@ export const ColorPicker = ({ onChange, colors }: ColorPickerProps) => {
           _active={{ bg: selectedColor }}
         ></Button>
       </PopoverTrigger>
-      <PopoverContent w="auto">
+      <PopoverContent w="auto" bg={bg}>
         <SimpleGrid columns={5} p={1} spacing={1}>
           {colorPalette.map((color, index) => (
             <Button
@@ -64,4 +64,5 @@ export const ColorPicker = ({ onChange, colors }: ColorPickerProps) => {
 interface ColorPickerProps {
   onChange: (value: string) => void;
   colors?: string[];
+  bg?: string;
 }
