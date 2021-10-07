@@ -82,6 +82,15 @@ export default function App() {
     </td>
     <td>Changes the background color of the PopoverContent.</td>
   </tr>
+  <tr>
+    <td>placement</td>
+    <td>"top" | "right" | "bottom" | "left" | "auto" | "end" | "start" | "auto-start" | "auto-end" | "top-start" | "top-end" | "bottom-start" | "bottom-end" | "right-start" | "right-end" | ... 6 more ...</td>
+    <td>false</td>
+    <td>
+        "bottom"
+    </td>
+    <td>The placement of the popper relative to its reference.</td>
+  </tr>
 </table>
 
 ## Running project
