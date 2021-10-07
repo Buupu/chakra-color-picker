@@ -1,10 +1,12 @@
 import {
   Button,
   Popover,
+  PopoverArrow,
   PopoverContent,
   PopoverTrigger,
   SimpleGrid,
   useBoolean,
+  PlacementWithLogical,
 } from "@chakra-ui/react";
 import React, { useState } from "react";
 
@@ -21,22 +23,29 @@ const defaultColors = [
   "pink.500",
 ];
 
-export const ColorPicker = ({ onChange, colors, bg }: ColorPickerProps) => {
+export const ColorPicker = ({
+  onChange,
+  colors,
+  bg,
+  placement,
+}: ColorPickerProps) => {
   const [isOpen, setIsOpen] = useBoolean();
   const [selectedColor, setSelectedColor] = useState<string>("");
   const colorPalette = colors || defaultColors;
 
   return (
-    <Popover isOpen={isOpen} onClose={setIsOpen.toggle}>
+    <Popover isOpen={isOpen} onClose={setIsOpen.toggle} placement={placement}>
       <PopoverTrigger>
         <Button
           bg={selectedColor || "white"}
           onClick={setIsOpen.toggle}
           _hover={{ bg: selectedColor, transform: "scale(1.05)" }}
           _active={{ bg: selectedColor }}
+          aria-label="color picker"
         ></Button>
       </PopoverTrigger>
-      <PopoverContent w="auto" bg={bg}>
+      <PopoverContent w="auto" bg={bg} boxShadow="md">
+        <PopoverArrow />
         <SimpleGrid columns={5} p={1} spacing={1}>
           {colorPalette.map((color, index) => (
             <Button
@@ -65,4 +74,5 @@ interface ColorPickerProps {
   onChange: (value: string) => void;
   colors?: string[];
   bg?: string;
+  placement?: PlacementWithLogical;
 }
