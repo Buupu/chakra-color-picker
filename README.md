@@ -2,7 +2,7 @@
 
 Color Picker Component Package for Chakra UI
 
-## Codesandbox Link Coming Soon
+## Codesandbox Link [Here](https://githubbox.com/Buupu/chakra-color-picker/tree/main/demo)
 
 ## NPM Link [Here](https://www.npmjs.com/package/chakra-color-picker)
 
@@ -90,6 +90,13 @@ export default function App() {
         "bottom"
     </td>
     <td>The placement of the popper relative to its reference.</td>
+  </tr>
+  <tr>
+    <td>isDisabled</td>
+    <td>boolean</td>
+    <td>false</td>
+    <td>false</td>
+    <td>If true, sets the color picker to be disabled.</td>
   </tr>
 </table>
 
