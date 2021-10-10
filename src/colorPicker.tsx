@@ -28,13 +28,18 @@ export const ColorPicker = ({
   colors,
   bg,
   placement,
+  isDisabled,
 }: ColorPickerProps) => {
   const [isOpen, setIsOpen] = useBoolean();
   const [selectedColor, setSelectedColor] = useState<string>("");
   const colorPalette = colors || defaultColors;
 
   return (
-    <Popover isOpen={isOpen} onClose={setIsOpen.toggle} placement={placement}>
+    <Popover
+      isOpen={isOpen && !isDisabled}
+      onClose={setIsOpen.toggle}
+      placement={placement}
+    >
       <PopoverTrigger>
         <Button
           bg={selectedColor || "white"}
@@ -42,6 +47,7 @@ export const ColorPicker = ({
           _hover={{ bg: selectedColor, transform: "scale(1.05)" }}
           _active={{ bg: selectedColor }}
           aria-label="color picker"
+          isDisabled={isDisabled}
         ></Button>
       </PopoverTrigger>
       <PopoverContent w="auto" bg={bg} boxShadow="md">
@@ -75,4 +81,5 @@ interface ColorPickerProps {
   colors?: string[];
   bg?: string;
   placement?: PlacementWithLogical;
+  isDisabled?: boolean;
 }
