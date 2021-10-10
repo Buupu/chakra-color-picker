@@ -2,7 +2,7 @@
 
 Color Picker Component Package for Chakra UI
 
-## Codesandbox Link Coming Soon
+## Codesandbox Link [Here](https://githubbox.com/Buupu/chakra-color-picker/tree/main/demo)
 
 ## NPM Link [Here](https://www.npmjs.com/package/chakra-color-picker)
 
