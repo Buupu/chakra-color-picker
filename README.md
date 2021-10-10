@@ -91,6 +91,13 @@ export default function App() {
     </td>
     <td>The placement of the popper relative to its reference.</td>
   </tr>
+  <tr>
+    <td>isDisabled</td>
+    <td>boolean</td>
+    <td>false</td>
+    <td>false</td>
+    <td>If true, sets the color picker to be disabled.</td>
+  </tr>
 </table>
 
 ## Running project
