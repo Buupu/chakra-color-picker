@@ -26,13 +26,14 @@ const defaultColors = [
 export const ColorPicker = ({
   onChange,
   colors,
+  defaultColor,
   bg,
   placement,
   isDisabled,
 }: ColorPickerProps) => {
   const [isOpen, setIsOpen] = useBoolean();
-  const [selectedColor, setSelectedColor] = useState<string>("");
   const colorPalette = colors || defaultColors;
+  const [selectedColor, setSelectedColor] = useState<string>(defaultColor || colorPalette[0]);
 
   return (
     <Popover
@@ -42,7 +43,7 @@ export const ColorPicker = ({
     >
       <PopoverTrigger>
         <Button
-          bg={selectedColor || "white"}
+          bg={selectedColor}
           onClick={setIsOpen.toggle}
           _hover={{ bg: selectedColor, transform: "scale(1.05)" }}
           _active={{ bg: selectedColor }}
@@ -79,6 +80,7 @@ export const ColorPicker = ({
 interface ColorPickerProps {
   onChange: (value: string) => void;
   colors?: string[];
+  defaultColor?: string;
   bg?: string;
   placement?: PlacementWithLogical;
   isDisabled?: boolean;
